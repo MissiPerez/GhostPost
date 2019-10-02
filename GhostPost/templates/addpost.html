@@ -1,0 +1,11 @@
+
+<body style="margin-left: 225px; margin-top: 75px; font-size: 25px;"></body>
+<a href="/addauthor">Add Author</a>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='submit'>
+</form>
+
+<a style=color:palevioletred href="/">HOME</a>

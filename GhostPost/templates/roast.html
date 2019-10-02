@@ -1,0 +1,16 @@
+<body style="margin-left: 225px; margin-top: 75px; font-size: 25px;"></body>
+{% extends "hello.html" %}
+
+{% block content %}
+
+
+<ul>
+    {% for i in quotes%}
+    <li><a href="hello.html/{{i.id}}">{{ i.title}}</a></li>
+    {{i.like}}
+    <a href="like/{{i.id}}">Upvote</a>
+    <a href="unlike/{{i.id}}">Downvote</a>
+    {% endfor %}
+
+</ul>
+{% endblock %}

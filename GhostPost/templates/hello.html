@@ -1,0 +1,37 @@
+<body style="margin-left: 225px; margin-top: 75px; font-size: 18px;">
+<h1 style=color:palevioletred>Welcome!</h1>
+
+<p>Feel free to add your favorite quote and author</p>
+<a href="/addpost"> - add a quote -</a>
+<br>
+<br>
+<a href="/addauthor">- add an author -</a>
+
+<h2>Vote for your favorites</h2>
+
+<button><a href="/roast/">Roast</a></button>
+<br>
+<button><a href="/boast/">Boast</a></button>
+<br>
+<button><a href="/sort/">Sort</a></button>
+
+{% for foo in text %}
+{% if foo.boast %}
+<h6>Post: boast </h6>
+{% else %}
+<h6>Post: roast </h6>
+{% endif %}
+<h6>Title: {{ foo.title }}</h6>
+<h6>Quote: {{ foo.description }}</h6>
+<h6>Date: {{foo.published_date}}</h6>
+<h6>Author: {{foo.author}}</h6>
+<h6>Vote Count: {{foo.vote_count}}</h6>
+<br>
+<button><a href="/addlike/{{ foo.id }}">likes</a></button>
+<button><a href="/removelike/{{ foo.id }}">dislike</a></button>
+<br>
+            
+{% endfor %}
+
+</body>
+

@@ -1,0 +1,13 @@
+<body style="margin-left: 225px; margin-top: 75px; font-size: 25px;"></body>
+<a href="/addpost">Add a quote</a>
+<br>
+<br>
+<form action="/addauthor" method="post">
+    
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="OK">
+</form>
+
+<a style=color:palevioletred href="/">HOME</a>
+
